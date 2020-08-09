@@ -149,7 +149,6 @@ class InformationFind:
         for word in self.inverted_index.keys():
             result.append(self.tf_idf(query_string.count(word), len(query_string), self.word_count[position]))
             position += 1
-        print(result)
         return result
     
     

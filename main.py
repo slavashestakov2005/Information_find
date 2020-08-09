@@ -1,5 +1,9 @@
+import help
 import informationfind as info
+
+
 def main():
+    help.start()
     filenames = [r'corpus\pg135.txt', r'corpus\pg76.txt', r'corpus\pg5200.txt']
     test = info.InformationFind(filenames)
     typ = input()
@@ -12,6 +16,7 @@ def main():
     else:
         result = test.files_with_text(input(), info.PHARSE_QUERY)
     print(result)
+    help.finish()
 
 
 try:
