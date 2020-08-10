@@ -4,7 +4,8 @@ import informationfind as info
 
 def main():
     help.start()
-    filenames = [r'corpus\pg135.txt', r'corpus\pg76.txt', r'corpus\pg5200.txt']
+    # filenames = [r'corpus\pg135.txt', r'corpus\pg76.txt', r'corpus\pg5200.txt']
+    filenames = [r'my_corpus\test3.txt', r'my_corpus\test.txt', r'my_corpus\test2.txt']
     test = info.InformationFind(filenames)
     typ = input()
     if typ == 'word':

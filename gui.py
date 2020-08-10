@@ -40,6 +40,10 @@ def main_window():
 
 def find_window(text):
     result = test.files_with_text(text, info.PHARSE_QUERY)
+    if result == []:
+        result = test.files_with_text(text, info.AND_QUERY)
+    if result == []:
+        result = test.files_with_text(text, info.OR_QUERY)
     layout = [
         [sg.Text('Запрос: ' + text, size=(30, 1), justification='center', font=("Helvetica", 25), relief=sg.RELIEF_RIDGE)]]
     for file in result:

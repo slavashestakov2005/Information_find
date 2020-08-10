@@ -1,4 +1,5 @@
 import help
+import math
 OR_QUERY = 0
 AND_QUERY = 1
 PHARSE_QUERY = 2
@@ -167,4 +168,4 @@ class InformationFind:
         else:
             tf = word_in_doc / words_in_doc
             idf = word_in_files / word_in_doc
-            return tf * idf
+            return tf * math.log10(idf)
